@@ -15,7 +15,7 @@ export_env_dir "$ENV_DIR"
 
 LATEST_VERSION=$(get_latest_release "42wim/matterbridge")
 MATTERBRIDGE_VERSION="${MATTERBRIDGE_VERSION:-$LATEST_VERSION}"
-MATTERBRIDGE_URL="${MATTERBRIDGE_URL:-https://github.com/42wim/matterbridge/releases/download/$MATTERBRIDGE_VERSION/matterbridge-linux-amd64}"
+MATTERBRIDGE_URL="${MATTERBRIDGE_URL:-https://github.com/42wim/matterbridge/releases/download/v$MATTERBRIDGE_VERSION/matterbridge-$MATTERBRIDGE_VERSION-linux-64bit}"
 
 echo "-----> Downloading Matterbridge: $MATTERBRIDGE_URL"
 cd $BUILD_DIR

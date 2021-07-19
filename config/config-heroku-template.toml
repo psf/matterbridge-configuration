@@ -7,11 +7,13 @@
   UseTLS=true
   UseSASL=true
   SkipTLSVerify=false
+  RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
 [slack]
   [slack.psf]
   Token="${MATTERBRIDGE_SLACK_PSF_TOKEN}"
-  PrefixMessagesWithNick=true
+  IconURL="https://robohash.org/{NICK}.png?size=48x48&set=set4"
+  RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
 [[gateway]]
 name="psfslackircgateway"

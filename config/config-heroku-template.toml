@@ -21,6 +21,8 @@ enable=true
   [[gateway.inout]]
   account="irc.libera"
   channel="#python-infra"
+    [gateway.inout.options]
+    IgnoreMessages="<(StatusPage.io|twitter)>"
   [[gateway.inout]]
   account="slack.psf"
   channel="infrastructure"

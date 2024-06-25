@@ -1,1 +1,1 @@
-worker: ./start.sh
+worker: /matterbridge/start.sh

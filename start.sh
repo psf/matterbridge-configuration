@@ -1,9 +1,9 @@
 #!/bin/bash
 
-########################################################################
-# Write Config variables in envrionment to the configuration JSON file #
-########################################################################
-lib/envsubst < config/config-heroku-template.toml > config/config-heroku.toml
+###################################################################
+# Write Config variables in envrionment to the configuration file #
+###################################################################
+envsubst < /matterbridge/config-template.toml > /matterbridge/config.toml
 
 #####################################
 # Pass SIGTERM to Matterbridge proc #
@@ -19,7 +19,7 @@ trap _term SIGTERM
 ####################
 # Start Matterbridge #
 ####################
-./matterbridge -conf config/config-heroku.toml &
+matterbridge -conf /matterbridge/config.toml &
 
 PID=$!
 
